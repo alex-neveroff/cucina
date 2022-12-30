@@ -1,4 +1,8 @@
+@import './components/common';
+@import './components/reset';
+
 @import './layouts/header';
+@import './components/logo';
 @import './layouts/mobile-menu';
 @import './layouts/hero';
 @import './layouts/products';
