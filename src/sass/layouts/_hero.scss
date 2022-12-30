@@ -2,8 +2,18 @@
   background: $bcg-gradient-hero;
   padding-top: 40px;
   padding-bottom: 40px;
+  @include tablet {
+    padding-top: 72px;
+    padding-bottom: 31px;
+  }
 }
 .hero__container {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
 }
 .hero__content {
   position: relative;
@@ -11,8 +21,8 @@
 .hero__content::before {
   content: '';
   position: absolute;
-  width: 302px;
-  height: 177px;
+  width: 233px;
+  height: 136px;
   top: 137px;
   left: -21px;
   transform: rotate(-20.76deg);
@@ -23,10 +33,17 @@
   @include retina {
     background-image: url(../images/vegetables-mob-2x.png);
   }
+  @include mobile {
+    width: 302px;
+    height: 177px;
+  }
+  @include tablet {
+    display: none;
+  }
 }
 
 .hero__title {
-  max-width: 195px;
+  width: 195px;
   padding-left: 8px;
   margin-bottom: 12px;
 
@@ -34,23 +51,30 @@
   font-size: 30px;
   line-height: 1.23;
   text-transform: uppercase;
+  border-left: 1px solid $color-main;
+
+  @include tablet {
+    margin-bottom: 24px;
+    width: 388px;
+    font-size: 64px;
+    line-height: 1.22;
+  }
 }
 
-.hero__title::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 1px;
-  height: 66px;
-  background-color: $color-main;
-}
 .hero__label {
   margin-bottom: 228px;
 
   color: $color-second;
   &--red {
     color: $color-red;
+  }
+
+  @include tablet {
+    margin-bottom: 48px;
+
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1.22;
   }
 }
 .hero__list {
@@ -59,22 +83,25 @@
   margin-bottom: 24px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 21px;
+
+  @include tablet {
+    justify-content: flex-start;
+    margin-top: 48px;
+    margin-bottom: 74px;
+  }
 }
 .hero__item {
   display: flex;
   gap: 12px;
-  flex-basis: 50%;
+  height: 78px;
   align-items: center;
 }
-
-.hero__item--line::before {
-  content: '';
-  top: 0;
-  left: 189px;
-  width: 1px;
-  height: 78px;
-  background-color: $color-main;
+.hero__item--line {
+  border-left: 1px solid $color-main;
 }
+
 .hero__number {
   font-weight: 600;
   font-size: 32px;
@@ -82,11 +109,30 @@
 }
 .hero__text {
 }
+
+.hero__picture {
+  position: relative;
+  @include tablet {
+    width: 432px;
+    height: 579px;
+  }
+}
 .hero__image {
   content: '';
   position: absolute;
-  top: -16px;
+  top: -558px;
   right: 0;
-  width: 202px;
-  height: 350px;
+  width: 156px;
+  height: 270px;
+
+  @include mobile {
+    width: 202px;
+    height: 350px;
+  }
+
+  @include tablet {
+    top: 0;
+    width: 432px;
+    height: 579px;
+  }
 }

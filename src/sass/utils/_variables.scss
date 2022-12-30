@@ -2,19 +2,9 @@ $montserrat: 'Montserrat', sans-serif;
 $roboto: 'Roboto', sans-serif;
 $inter: 'Inter', sans-serif;
 
-$bcg-main: rgba(16, 15, 15, 0.9);
-$bcg-gradient-hero: linear-gradient(
-  228.52deg,
-  rgba(111, 102, 102, 0.9) 4.71%,
-  rgba(16, 15, 15, 0.9) 39.77%,
-  rgba(16, 15, 15, 0.9) 44.21%
-);
-$bcg-gradient-header: linear-gradient(
-  256.51deg,
-  rgba(111, 102, 102, 0.9) 26.96%,
-  rgba(16, 15, 15, 0.9) 79.08%,
-  rgba(16, 15, 15, 0.9) 79.08%
-);
+$bcg-main: #100f0f;
+$bcg-gradient-hero: linear-gradient(237.05deg, #6f6666 1.42%, #100f0f 45.36%);
+$bcg-gradient-header: linear-gradient(270deg, #6f6666 2.17%, #100f0f 75.72%);
 $color-main: #f3f3f3;
 $color-second: #ffffff;
 $color-red: #bc1a1a;

@@ -1,12 +1,21 @@
 .social-net__list {
   display: flex;
-  gap: 24px;
   justify-content: center;
+  gap: 24px;
+  @include tablet {
+    gap: 40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .social-net__link {
   width: 16px;
   height: 16px;
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .social-net__link {
@@ -19,6 +28,6 @@
 .social-net__logo {
   display: block;
   fill: currentColor;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }

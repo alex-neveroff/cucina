@@ -16,9 +16,15 @@
 }
 
 .button--hero {
-  width: 384px;
+  max-width: 384px;
+  width: 100%;
   height: 66px;
   border-radius: 16px;
   font-size: 20px;
   line-height: 1.2;
+
+  @include tablet {
+    width: 302px;
+    height: 77px;
+  }
 }
