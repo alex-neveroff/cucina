@@ -1,8 +1,15 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/hidden';
+
 @import './components/common';
 @import './components/reset';
+@import './components/container';
+@import './components/logo';
+@import './components/buttons';
+@import './components/social-net';
 
 @import './layouts/header';
-@import './components/logo';
 @import './layouts/mobile-menu';
 @import './layouts/hero';
 @import './layouts/products';

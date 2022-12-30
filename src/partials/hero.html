@@ -1,42 +1,95 @@
 <section class="section hero">
-  <div class="container">
+  <div class="container hero__container">
     <div class="hero__content">
       <h1 class="hero__title">Cucina di catherina</h1>
-      <h2 class="hero__label">We know, you will love our product</h2>
-      <button class="button">Buy now</button>
+      <p class="hero__label">
+        We know,<br />you will <span class="hero__label--red">love</span> our
+        product
+      </p>
+      <button class="button button--hero">Buy now</button>
       <ul class="hero__list">
         <li class="hero__item">
           <span class="hero__number">14</span>
           <p class="hero__text">different tastes</p>
         </li>
-        <li class="hero__item">
+        <li class="hero__item hero__item--line">
           <span class="hero__number">31</span>
           <p class="hero__text">factories around the world</p>
         </li>
       </ul>
+
+      <picture>
+        <source
+          srcset="
+            ./images/ketchup-desk-1x.png 1x,
+            ./images/ketchup-desk-2x.png 2x
+          "
+          media="(min-width: 1020px)"
+        />
+        <source
+          srcset="
+            ./images/ketchup-mob-1x.png 1x,
+            ./images/ketchup-mob-2x.png 2x
+          "
+          media="(max-width: 1019px)"
+        />
+        <img
+          class="hero__image"
+          src="./images/ketchup-desk-1x.png"
+          alt="Ketchup bottle"
+          loading="lazy"
+        />
+      </picture>
     </div>
-    <div class="hero__picture">
-      <ul class="hero__list">
-        <li class="hero__item">italy tomatoes</li>
-        <li class="hero__item">fresh garlic</li>
-        <li class="hero__item">white wine</li>
-        <li class="hero__item">fresh basil</li>
-      </ul>
-      <img
-        class="hero__image"
-        src="./images/ketchup-desk-1x.png"
-        alt="Ketchup bottle"
-        width="305"
-        height="535"
-      />
-    </div>
-    <div class="social-net">
-      <ul class="social-net__list">
-        <li class="social-net__item"></li>
-        <li class="social-net__item"></li>
-        <li class="social-net__item"></li>
-        <li class="social-net__item"></li>
-      </ul>
-    </div>
+    <ul class="social-net__list">
+      <li class="social-net__item">
+        <a
+          class="social-net__link"
+          href="#"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <svg class="social-net__logo">
+            <use href="/src/images/sprite.svg#icon-social-tumblr"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-net__item">
+        <a
+          class="social-net__link"
+          href="#"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <svg class="social-net__logo">
+            <use href="/src/images/sprite.svg#icon-social-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-net__item">
+        <a
+          class="social-net__link"
+          href="#"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <svg class="social-net__logo">
+            <use href="/src/images/sprite.svg#icon-social-youtube"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-net__item">
+        <a
+          class="social-net__link"
+          href="#"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <svg class="social-net__logo">
+            <use href="/src/images/sprite.svg#icon-social-twitter"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>

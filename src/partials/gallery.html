@@ -1,6 +1,103 @@
 <section class="section gallery">
   <div class="container">
     <h2 class="hidden">Gallery</h2>
-    <div class="gallery__slider"></div>
+    <div class="slider-gallery">
+      <div class="slider-gallery__item">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery01-desk-1x.jpg 1x,
+              ./images/gallery01-desk-2x.jpg 2x
+            "
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/gallery01-tab-1x.jpg 1x,
+              ./images/gallery01-tab-2x.jpg 2x
+            "
+            media="(min-width: 1020px)"
+          />
+          <source
+            srcset="
+              ./images/gallery01-mob-1x.jpg 1x,
+              ./images/gallery01-mob-2x.jpg 2x
+            "
+            media="(min-width: 320px)"
+          />
+          <img
+            class="gallery__image"
+            src="images/gallery01-desk-1x.jpg"
+            alt="Man picking tomatoes from a bush"
+            loading="lazy"
+            width="1038"
+          />
+        </picture>
+      </div>
+      <div class="slider-gallery__item">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery02-desk-1x.jpg 1x,
+              ./images/gallery02-desk-2x.jpg 2x
+            "
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/gallery02-tab-1x.jpg 1x,
+              ./images/gallery02-tab-2x.jpg 2x
+            "
+            media="(min-width: 1020px)"
+          />
+          <source
+            srcset="
+              ./images/gallery02-mob-1x.jpg 1x,
+              ./images/gallery02-mob-2x.jpg 2x
+            "
+            media="(min-width: 320px)"
+          />
+          <img
+            class="gallery__image"
+            src="./images/gallery02-desk-1x.jpg"
+            alt="Girls picking tomatoes from a bush"
+            loading="lazy"
+            width="1038"
+          />
+        </picture>
+      </div>
+      <div class="slider-gallery__item">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery03-desk-1x.jpg 1x,
+              ./images/gallery03-desk-2x.jpg 2x
+            "
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/gallery03-tab-1x.jpg 1x,
+              ./images/gallery03-tab-2x.jpg 2x
+            "
+            media="(min-width: 1020px)"
+          />
+          <source
+            srcset="
+              ./images/gallery03-mob-1x.jpg 1x,
+              ./images/gallery03-mob-2x.jpg 2x
+            "
+            media="(min-width: 320px)"
+          />
+          <img
+            class="gallery__image"
+            src="./images/gallery03-desk-1x.jpg"
+            alt="Man puts tomatoes in a box"
+            loading="lazy"
+            width="1038"
+          />
+        </picture>
+      </div>
+    </div>
   </div>
 </section>

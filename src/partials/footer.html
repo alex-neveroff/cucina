@@ -1,11 +1,12 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__up-part">
-      <a href="" class="logo"
-        ><img
-          class="logo__image"
+      <a href="/" class="logo">
+        <img
           src="./images/logo-1x.png"
-          alt="Logo od Cucina"
+          srcset="./images/logo-1x.png 1x, ./images/logo-2x.png 2x"
+          class="logo__image"
+          alt="Logo of Cucina"
           width="132"
           height="32"
         />
@@ -17,24 +18,102 @@
         <li class="footer__item">Gallery</li>
       </ul>
 
-      <ul class="footer__list footer__list--contacts">
-        <li class="footer__item">Elvia Elviaveien 1, 1234 Oslo</li>
-        <li class="footer__item">willie.jennings@example.com</li>
-      </ul>
-      <div class="social-net">
-        <ul class="social-net__list">
-          <li class="social-net__item"></li>
-          <li class="social-net__item"></li>
-          <li class="social-net__item"></li>
-          <li class="social-net__item"></li>
+      <address>
+        <ul class="footer__list footer__list--contacts">
+          <li class="footer__item">
+            <a
+              href="https://goo.gl/maps/uNxrcM7Ruqw2PwGc9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__link"
+            >
+              <svg class="social-net__logo" width="24" height="24">
+                <use
+                  href="/src/images/sprite.svg#icon-footer-location"
+                ></use></svg
+              >Elvia Elviaveien 1, 1234 Oslo</a
+            >
+          </li>
+          <li class="footer__item">
+            <a href="mailto:willie.jennings@example.com"
+              ><svg class="social-net__logo" width="24" height="24">
+                <use href="/src/images/sprite.svg#icon-footer-envelope"></use>
+              </svg>
+              willie.jennings@example.com</a
+            >
+          </li>
         </ul>
-      </div>
+      </address>
+
+      <ul class="social-net__list">
+        <li class="social-net__item">
+          <a
+            class="social-net__link"
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social-net__logo" width="24" height="24">
+              <use href="/src/images/sprite.svg#icon-social-tumblr"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-net__item">
+          <a
+            class="social-net__link"
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social-net__logo" width="24" height="24">
+              <use href="/src/images/sprite.svg#icon-social-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-net__item">
+          <a
+            class="social-net__link"
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social-net__logo" width="24" height="24">
+              <use href="/src/images/sprite.svg#icon-social-youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-net__item">
+          <a
+            class="social-net__link"
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social-net__logo" width="24" height="24">
+              <use href="/src/images/sprite.svg#icon-social-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="footer__down-part">
       <p class="footer__text">
         By using this website, you agree to the
-        <a href="" class="footer__link">Terms of Service</a> and
-        <a href="" class="footer__link">Privacy Policy</a>
+        <a
+          href=""
+          class="footer__link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Terms of Service</a
+        >
+        and
+        <a
+          href=""
+          class="footer__link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Privacy Policy</a
+        >
       </p>
     </div>
   </div>

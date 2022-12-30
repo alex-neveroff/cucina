@@ -1,1 +1,9 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: $montserrat;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $color-main;
+  background-color: $bcg-main;
+}

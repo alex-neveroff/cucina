@@ -1,0 +1,24 @@
+.button {
+  width: 108px;
+  height: 29px;
+
+  color: $color-main;
+  line-height: inherit;
+
+  background-color: $color-button;
+  border-radius: 8px;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
+
+.button--hero {
+  width: 384px;
+  height: 66px;
+  border-radius: 16px;
+  font-size: 20px;
+  line-height: 1.2;
+}

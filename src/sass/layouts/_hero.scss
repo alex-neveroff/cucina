@@ -1,0 +1,92 @@
+.hero {
+  background: $bcg-gradient-hero;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.hero__container {
+}
+.hero__content {
+  position: relative;
+}
+.hero__content::before {
+  content: '';
+  position: absolute;
+  width: 302px;
+  height: 177px;
+  top: 137px;
+  left: -21px;
+  transform: rotate(-20.76deg);
+
+  background-image: url(../images/vegetables-mob-1x.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  @include retina {
+    background-image: url(../images/vegetables-mob-2x.png);
+  }
+}
+
+.hero__title {
+  max-width: 195px;
+  padding-left: 8px;
+  margin-bottom: 12px;
+
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.23;
+  text-transform: uppercase;
+}
+
+.hero__title::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1px;
+  height: 66px;
+  background-color: $color-main;
+}
+.hero__label {
+  margin-bottom: 228px;
+
+  color: $color-second;
+  &--red {
+    color: $color-red;
+  }
+}
+.hero__list {
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+.hero__item {
+  display: flex;
+  gap: 12px;
+  flex-basis: 50%;
+  align-items: center;
+}
+
+.hero__item--line::before {
+  content: '';
+  top: 0;
+  left: 189px;
+  width: 1px;
+  height: 78px;
+  background-color: $color-main;
+}
+.hero__number {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.22;
+}
+.hero__text {
+}
+.hero__image {
+  content: '';
+  position: absolute;
+  top: -16px;
+  right: 0;
+  width: 202px;
+  height: 350px;
+}
