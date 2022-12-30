@@ -7,6 +7,10 @@
     margin-right: auto;
     margin-left: auto;
   }
+  @include desktop {
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 
 .social-net__link {
