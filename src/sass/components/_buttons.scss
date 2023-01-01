@@ -28,3 +28,31 @@
     height: 77px;
   }
 }
+
+.button--header {
+  display: block;
+  width: 160px;
+  height: 40px;
+  border: 1px solid $color-main;
+  border-radius: 16px;
+  background-color: transparent;
+
+  font-family: 'Montserrat';
+
+  font-weight: 800;
+
+  &:hover,
+  &:focus {
+    background-color: $bcg-main;
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+}
+
+.button--hide {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}

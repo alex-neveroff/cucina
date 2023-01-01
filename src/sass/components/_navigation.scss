@@ -1,0 +1,17 @@
+.navigation__list {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 52px;
+  }
+}
+
+.navigation__link {
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}

@@ -1,0 +1,37 @@
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.mobile-menu__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 16px;
+  border: none;
+
+  color: $color-main;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+.header__icon {
+  fill: currentColor;
+}
