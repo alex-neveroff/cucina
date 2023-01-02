@@ -1,4 +1,3 @@
-
 .header__container {
   display: flex;
   align-items: center;
@@ -11,27 +10,6 @@
   }
 }
 
-.mobile-menu__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 32px;
-  height: 16px;
-  border: none;
-
-  color: $color-main;
-  background-color: transparent;
-
-  &:hover,
-  &:focus {
-    color: $color-accent;
-  }
-
-  @include tablet {
-    display: none;
-  }
-}
 .header__icon {
   fill: currentColor;
 }

@@ -24,27 +24,31 @@ $('.slider-gallery').slick({
     openMenuBtn: document.querySelector('[menu-open]'),
     closeMenuBtn: document.querySelector('[menu-close]'),
     menu: document.querySelector('[menu]'),
+    body: document.querySelector('body'),
+    menuList: document.querySelector('.menu-list'),
   };
 
   refs.openMenuBtn.addEventListener('click', toggleModal);
   refs.closeMenuBtn.addEventListener('click', toggleModal);
+  refs.menuList.addEventListener('click', toggleModal);
 
   function toggleModal() {
     refs.menu.classList.toggle('is-hidden');
+    refs.body.classList.toggle('no-scroll');
   }
 })();
 
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-modal-open]'),
+//     closeModalBtn: document.querySelector('[data-modal-close]'),
+//     modal: document.querySelector('[data-modal]'),
+//   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//   }
+// })();

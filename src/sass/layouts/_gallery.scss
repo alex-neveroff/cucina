@@ -58,18 +58,23 @@
   background-size: contain;
   opacity: 1;
 
+  transition: background-color $transit, border-radius $transit;
+
   @include tablet {
     width: 32px;
     height: 32px;
   }
 }
 .slick-next:hover::before,
-.slick-prev:hover::before {
+.slick-prev:hover::before,
+.slick-next:focus::before,
+.slick-prev:focus::before {
   background-color: $color-accent;
   border-radius: 50%;
 }
 
 .slick-prev {
+  z-index: 50;
   left: 0;
 }
 .slick-prev:before {
@@ -77,6 +82,7 @@
 }
 
 .slick-next {
+  z-index: 50;
   right: 0;
 }
 .slick-next:before {

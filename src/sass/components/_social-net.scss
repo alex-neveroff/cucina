@@ -23,6 +23,8 @@
 }
 
 .social-net__link {
+  transition: color $transit;
+
   &:hover,
   &:focus {
     color: $color-accent;

@@ -79,6 +79,8 @@
   background-position: center;
   border: none;
 
+  transition: background-color $transit, border-radius $transit;
+
   @include tablet {
     width: 32px;
     height: 32px;
@@ -95,7 +97,8 @@
   background-image: url('../images/arrow-down.svg');
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: $color-accent;
   border-radius: 50%;
 }
