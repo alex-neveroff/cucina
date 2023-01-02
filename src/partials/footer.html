@@ -11,32 +11,44 @@
           height="32"
         />
       </a>
-      <ul class="footer__list">
-        <li class="footer__item">Home</li>
-        <li class="footer__item">Store</li>
-        <li class="footer__item">Recipes</li>
-        <li class="footer__item">Gallery</li>
+      <ul class="footer-nav">
+        <li class="footer-nav__item">
+          <a href="#home" class="footer-nav__link">Home</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#store" class="footer-nav__link">Store</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#recipes" class="footer-nav__link">Recipes</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#gallery" class="footer-nav__link">Gallery</a>
+        </li>
       </ul>
 
       <address>
-        <ul class="footer__list footer__list--contacts">
-          <li class="footer__item">
+        <ul class="address__list">
+          <li class="address__item">
             <a
               href="https://goo.gl/maps/uNxrcM7Ruqw2PwGc9"
               target="_blank"
               rel="noopener noreferrer"
-              class="footer__link"
+              class="address__link"
             >
-              <svg class="social-net__logo" width="24" height="24">
+              <svg class="address__logo" width="24" height="24">
                 <use
                   href="/src/images/sprite.svg#icon-footer-location"
                 ></use></svg
               >Elvia Elviaveien 1, 1234 Oslo</a
             >
           </li>
-          <li class="footer__item">
-            <a href="mailto:willie.jennings@example.com"
-              ><svg class="social-net__logo" width="24" height="24">
+          <li class="address__item">
+            <a
+              href="mailto:willie.jennings@example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="address__link"
+              ><svg class="address__logo" width="24" height="24">
                 <use href="/src/images/sprite.svg#icon-footer-envelope"></use>
               </svg>
               willie.jennings@example.com</a
@@ -45,8 +57,8 @@
         </ul>
       </address>
 
-      <ul class="social-net__list">
-        <li class="social-net__item">
+      <ul class="social-net__list social-net__list--footer">
+        <li class="social-net__item social-net__item--footer">
           <a
             class="social-net__link"
             href="#"

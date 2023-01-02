@@ -1,3 +1,16 @@
+.gallery__image {
+  width: 336px;
+  border-radius: 8px;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 770px;
+  }
+
+  @include desktop {
+    width: 1038px;
+  }
+}
 .slick-dots {
   bottom: -8px;
   display: flex;
@@ -57,14 +70,14 @@
 }
 
 .slick-prev {
-  left: -35px;
+  left: 0;
 }
 .slick-prev:before {
   background-image: url(../images/arrow-left.svg);
 }
 
 .slick-next {
-  right: -25px;
+  right: 0;
 }
 .slick-next:before {
   background-image: url(../images/arrow-right.svg);
