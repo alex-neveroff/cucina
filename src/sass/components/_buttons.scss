@@ -68,7 +68,6 @@
 }
 
 .button--modal {
-  max-width: 384px;
   width: 100%;
   height: 66px;
 
@@ -77,9 +76,9 @@
   line-height: 1.2;
 
   @include mobile {
-    width: 384px;
+    // width: 384px;
   }
   @include tablet {
-    width: 410px;
+    // width: 410px;
   }
 }
