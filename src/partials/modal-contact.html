@@ -1,7 +1,7 @@
 <div class="backdrop is-hidden contact-modal">
-  <div class="modal">
-    <div class="container modal__container">
-      <button type="button" class="modal-close">
+  <div class="modal contact-modal">
+    <div class="container modal__container contact-modal__container">
+      <button type="button" class="contacts-close">
         <svg class="header__icon" width="32" hight="32">
           <use href="./images/sprite.svg#icon-cross"></use>
         </svg>
@@ -16,6 +16,9 @@
               type="text"
               name="name"
               placeholder="Yuliia"
+              required
+              pattern="[a-zA-Z]{3,36}"
+              title="The name must contain only letters."
           /></label>
         </div>
         <div class="modal__field">
@@ -26,6 +29,9 @@
               type="tel"
               name="phone"
               placeholder="+380"
+              required
+              pattern="['+']{1}[0-9]{12}"
+              title="The phone number must contain + and 12 digits."
           /></label>
         </div>
         <div class="modal__field">
@@ -36,6 +42,8 @@
               type="email"
               name="email"
               placeholder="contact@gmail.com"
+              required
+              title="Please enter a valid email."
           /></label>
         </div>
         <div class="modal__field">

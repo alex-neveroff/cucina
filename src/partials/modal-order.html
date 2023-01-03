@@ -1,0 +1,165 @@
+<div class="backdrop is-hidden order-modal">
+  <div class="modal">
+    <div class="container modal__container order-modal__container">
+      <button type="button" class="order-close">
+        <svg class="header__icon" width="32" hight="32">
+          <use href="./images/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <h2 class="modal__title">Your ordering</h2>
+      <form class="modal__form" name="form_contacts" autocomplete="on">
+        <h3 class="modal__subtitle">Contacts</h3>
+        <div class="modal__field">
+          <label class="modal__label"
+            >Name
+            <input
+              class="modal__input"
+              type="text"
+              name="name"
+              placeholder="Yuliia"
+              required
+              pattern="[a-zA-Z]{3,36}"
+              title="The name must contain only letters."
+          /></label>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label"
+            >Telephone
+            <input
+              class="modal__input"
+              type="tel"
+              name="phone"
+              placeholder="+380"
+              required
+              pattern="['+']{1}[0-9]{12}"
+              title="The phone number must contain + and 12 digits."
+          /></label>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label"
+            >Email
+            <input
+              class="modal__input"
+              type="email"
+              name="email"
+              placeholder="contact@gmail.com"
+              required
+              title="Please enter a valid email."
+          /></label>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label"
+            >City
+            <select class="modal__input" name="city" size="1">
+              <option value="kyiv">Kyiv</option>
+              <option value="kharkiv">Kharkiv</option>
+              <option value="odesa">Odesa</option>
+              <option value="dnipro">Dnipro</option>
+              <option value="donetsk">Donetsk</option>
+              <option value="zaporizhzhia">Zaporizhzhia</option>
+              <option value="lviv">Lviv</option>
+              <option value="kryvyirih">Kryvyi Rih</option>
+              <option value="mykolaiv">Mykolaiv</option>
+              <option value="sevastopol">Sevastopol</option>
+              <option value="mariupol">Mariupol</option>
+              <option value="luhansk">Luhansk</option>
+            </select>
+          </label>
+        </div>
+
+        <h3 class="modal__subtitle">Delivery</h3>
+
+        <div class="modal__radio">
+          <input
+            class="modal__input modal__input--radio hidden"
+            type="radio"
+            name="delivery"
+            value="department"
+            id="department"
+            checked
+          />
+          <label for="department" class="modal__label modal__label--radio"
+            >Delivery to department of Nova Poshta</label
+          >
+          <input
+            class="modal__input modal__input--radio hidden"
+            type="radio"
+            name="delivery"
+            value="courier"
+            id="courier"
+          />
+          <label for="courier" class="modal__label modal__label--radio"
+            >Delivery by courier of Nova Poshta</label
+          >
+        </div>
+
+        <div class="modal__field">
+          <label class="modal__label"
+            >Select department
+            <select class="modal__input" name="department" size="1">
+              <option value="n1">Department №1</option>
+              <option value="n2">Department №2</option>
+              <option value="n3">Department №3</option>
+              <option value="n4">Department №4</option>
+              <option value="n5">Department №5</option>
+            </select>
+          </label>
+        </div>
+
+        <h3 class="modal__subtitle">Payment method</h3>
+
+        <div class="modal__payment">
+          <input
+            class="modal__input--payment"
+            type="radio"
+            name="payment"
+            value="card"
+            id="card"
+            checked
+          />
+          <label for="card" class="modal__label modal__label--payment"
+            >Credit card (Visa, Mastercard, ApplePay)</label
+          >
+        </div>
+        <div class="modal__payment">
+          <input
+            class="modal__input--payment"
+            type="radio"
+            name="payment"
+            value="cash"
+            id="cash"
+          />
+          <label for="cash" class="modal__label modal__label--payment"
+            >Cash on delivery</label
+          >
+        </div>
+
+        <div class="modal__field">
+          <label class="modal__label">
+            <textarea
+              name="comment"
+              rows="1"
+              placeholder="Add a comment to the order"
+              class="modal__input"
+            ></textarea>
+          </label>
+        </div>
+
+        <div class="modal__checkbox">
+          <input
+            class="modal__input--checkbox"
+            type="checkbox"
+            name="recall"
+            value="not-calling"
+            id="recall"
+          />
+          <label for="recall" class="modal__label modal__label--checkbox"
+            >Do not call to confirm</label
+          >
+        </div>
+
+        <button type="submit" class="button button--modal">Contact us</button>
+      </form>
+    </div>
+  </div>
+</div>

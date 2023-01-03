@@ -15,6 +15,9 @@
   opacity: 0;
   pointer-events: none;
   .modal {
+    transform: scale(0.2);
+  }
+  .contact-modal {
     transform: translate(-50%, -50%) scale(0.2);
   }
 }

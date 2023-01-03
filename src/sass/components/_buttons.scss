@@ -74,11 +74,4 @@
   font-weight: 800;
   font-size: 20px;
   line-height: 1.2;
-
-  @include mobile {
-    // width: 384px;
-  }
-  @include tablet {
-    // width: 410px;
-  }
 }

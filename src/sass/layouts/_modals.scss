@@ -1,0 +1,184 @@
+.order-modal,
+.contact-modal {
+  overflow-y: auto;
+}
+
+.modal {
+  z-index: 30;
+
+  transform: scale(1);
+  transition: transform $transit;
+}
+
+.modal__container {
+  position: relative;
+  background-color: $bcg-main;
+  border-radius: 4px;
+  width: 100%;
+
+  padding: 60px 15px;
+
+  @include mobile {
+    width: 415px;
+    height: 756px;
+  }
+
+  @include tablet {
+    padding: 60px 60px;
+    width: 530px;
+  }
+}
+
+.contact-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transit;
+}
+
+.order-modal__container {
+  @include mobile {
+    width: 415px;
+    height: 1262px;
+  }
+
+  @include tablet {
+    width: 504px;
+  }
+}
+
+.contacts-close,
+.order-close {
+  position: absolute;
+  right: 20px;
+  top: -40px;
+  width: 32px;
+  height: 32px;
+
+  color: $color-main;
+  background-color: transparent;
+  border: none;
+
+  transition: color $transit;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.modal__title {
+  margin-bottom: 52px;
+  font-size: 28px;
+  line-height: 1.21;
+  text-align: center;
+  @include tablet {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 1.22;
+  }
+}
+
+.modal__subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.21;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+option {
+  background-color: $bcg-main;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal__input {
+  padding: 16px 15px;
+  background-color: transparent;
+  border: 1px solid $color-main;
+  border-radius: 16px;
+  color: $color-placeholder;
+  transition: border-color $transit;
+
+  &:focus {
+    border-color: $color-accent;
+    outline: none;
+  }
+}
+
+.modal__input::placeholder {
+  color: $color-placeholder;
+}
+
+.modal__radio {
+  display: flex;
+  border: 1px solid $color-main;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal__label--radio {
+  justify-content: center;
+  background-color: transparent;
+  padding: 16px 15px;
+  color: $color-main;
+  text-align: center;
+
+  transition: color $transit, background-color $transit;
+}
+
+.modal__input--radio:checked + .modal__label--radio {
+  color: #2c2c2c;
+  background-color: $color-main;
+}
+
+.modal__payment {
+  display: flex;
+  gap: 12px;
+}
+
+.modal__input--payment {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: $color-main;
+  border: 1px solid $bcg-main;
+  border-radius: 50%;
+  outline: none;
+
+  transition: border $transit, background-color $transit;
+}
+
+.modal__input--payment:checked {
+  background-color: #2c2c2c;
+  border: 6px solid $color-main;
+}
+
+.modal__checkbox {
+  display: flex;
+  gap: 12px;
+}
+
+.modal__input--checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: $bcg-main;
+  border: 2px solid $color-main;
+
+  transition: background-color $transit;
+}
+
+.modal__input--checkbox:checked {
+  background-color: $color-accent;
+}
