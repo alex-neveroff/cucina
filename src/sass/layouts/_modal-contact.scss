@@ -1,0 +1,91 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+
+  overflow: auto;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transit;
+}
+
+.modal__container {
+  background-color: $bcg-main;
+  border-radius: 4px;
+
+  max-width: 415px;
+  max-height: 100vh;
+  width: 100%;
+
+  padding: 60px 15px;
+
+  @include mobile {
+    width: 415px;
+    height: 756px;
+  }
+
+  @include tablet {
+    padding: 60px 60px;
+    width: 530px;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: -40px;
+  width: 32px;
+  height: 32px;
+
+  color: $color-main;
+  background-color: transparent;
+  border: none;
+
+  transition: color $transit;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.modal__title {
+  margin-bottom: 52px;
+  font-size: 28px;
+  line-height: 1.21;
+  text-align: center;
+  @include tablet {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 1.22;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal__input {
+  padding: 16px 15px;
+  background-color: transparent;
+  border: 1px solid $color-main;
+  border-radius: 16px;
+  color: $color-placeholder;
+  &:focus {
+    border-color: $color-accent;
+    outline: transparent;
+  }
+}
+
+.modal__input::placeholder {
+  color: $color-placeholder;
+}

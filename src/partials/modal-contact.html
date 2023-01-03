@@ -1,0 +1,55 @@
+<div class="backdrop is-hidden contact-modal">
+  <div class="modal">
+    <div class="container modal__container">
+      <button type="button" class="modal-close">
+        <svg class="header__icon" width="32" hight="32">
+          <use href="./images/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <h2 class="modal__title">Leave your contacts and we will contact you</h2>
+      <form class="modal__form" name="form_contacts" autocomplete="on">
+        <div class="modal__field">
+          <label class="modal__label"
+            >Name
+            <input
+              class="modal__input"
+              type="text"
+              name="name"
+              placeholder="Yuliia"
+          /></label>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label"
+            >Telephone
+            <input
+              class="modal__input"
+              type="tel"
+              name="phone"
+              placeholder="+380"
+          /></label>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label"
+            >Email
+            <input
+              class="modal__input"
+              type="email"
+              name="email"
+              placeholder="contact@gmail.com"
+          /></label>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label">
+            <textarea
+              name="comment"
+              rows="4"
+              placeholder="How can we help you?"
+              class="modal__input"
+            ></textarea>
+          </label>
+        </div>
+        <button type="submit" class="button button--modal">Contact us</button>
+      </form>
+    </div>
+  </div>
+</div>
