@@ -182,3 +182,7 @@ option {
 .modal__input--checkbox:checked {
   background-color: $color-accent;
 }
+
+.modal__input:not(:focus):invalid {
+  color: red;
+}
