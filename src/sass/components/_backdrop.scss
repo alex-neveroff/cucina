@@ -9,6 +9,8 @@
   background-color: $bcg-backdrop;
 
   opacity: 1;
+
+  transition: opacity $transit, visibility $transit;
 }
 .is-hidden {
   visibility: hidden;
