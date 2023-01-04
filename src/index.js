@@ -41,7 +41,7 @@ $('.slider-gallery').slick({
   refs.menuList.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.menu.classList.toggle('is-hidden');
+    refs.menu.classList.toggle('is-opened');
     refs.body.classList.toggle('no-scroll');
   }
 })();

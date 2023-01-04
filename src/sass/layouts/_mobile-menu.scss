@@ -14,8 +14,12 @@
 
   background-color: $bcg-main;
 
-  transform: translateX(0);
+  transform: translateX(100%);
   transition: transform $transit;
+
+  &.is-opened {
+    transform: translateX(0);
+  }
 
   @include tablet {
     display: none;
