@@ -1,42 +1,143 @@
-<header class="header" id="home">
-  <div class="container header__container">
-    <a href="/" class="logo">
-      <img
-        src="./images/logo-1x.png"
-        srcset="./images/logo-1x.png 1x, ./images/logo-2x.png 2x"
-        class="logo__image"
-        alt="Logo of Cucina"
-        width="132"
-        height="32"
-      />
-    </a>
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a href="#home" class="navigation__link">Home</a>
+<div class="gradient">
+  <header class="header" id="home">
+    <div class="container header__container">
+      <a href="/" class="logo">
+        <img
+          src="./images/logo-1x.png"
+          srcset="./images/logo-1x.png 1x, ./images/logo-2x.png 2x"
+          class="logo__image"
+          alt="Logo of Cucina"
+          width="132"
+          height="32"
+        />
+      </a>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#home" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#store" class="navigation__link">Store</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#recipes" class="navigation__link">Recipes</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#gallery" class="navigation__link">Gallery</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        type="button"
+        class="button button--header button--hide contacts-open"
+      >
+        Contact us
+      </button>
+
+      <button type="button" class="mobile-menu__button" menu-open>
+        <svg class="header__icon">
+          <use href="./images/sprite.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <section class="section hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1 class="hero__title">Cucina di catherina</h1>
+        <p class="hero__label">
+          We know,<br />you will <span class="hero__label--red">love</span> our
+          product
+        </p>
+        <button class="button button--hero order-open">Buy now</button>
+        <ul class="hero__list">
+          <li class="hero__item">
+            <span class="hero__number">14</span>
+            <p class="hero__text">different tastes</p>
+          </li>
+          <li class="hero__item hero__item--line"></li>
+          <li class="hero__item">
+            <span class="hero__number">31</span>
+            <p class="hero__text">factories around<br />the world</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__picture">
+        <picture>
+          <source
+            srcset="
+              ./images/ketchup-desk-1x.png 1x,
+              ./images/ketchup-desk-2x.png 2x
+            "
+            media="(min-width: 1020px)"
+          />
+          <source
+            srcset="
+              ./images/ketchup-mob-1x.png 1x,
+              ./images/ketchup-mob-2x.png 2x
+            "
+            media="(max-width: 1019px)"
+          />
+          <img
+            class="hero__image"
+            src="./images/ketchup-desk-1x.png"
+            alt="Ketchup bottle"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+
+      <ul class="social-net__list">
+        <li class="social-net__item">
+          <a
+            class="social-net__link"
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social-net__logo">
+              <use href="/src/images/sprite.svg#icon-social-tumblr"></use>
+            </svg>
+          </a>
         </li>
-        <li class="navigation__item">
-          <a href="#store" class="navigation__link">Store</a>
+        <li class="social-net__item">
+          <a
+            class="social-net__link"
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social-net__logo">
+              <use href="/src/images/sprite.svg#icon-social-instagram"></use>
+            </svg>
+          </a>
         </li>
-        <li class="navigation__item">
-          <a href="#recipes" class="navigation__link">Recipes</a>
+        <li class="social-net__item">
+          <a
+            class="social-net__link"
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social-net__logo">
+              <use href="/src/images/sprite.svg#icon-social-youtube"></use>
+            </svg>
+          </a>
         </li>
-        <li class="navigation__item">
-          <a href="#gallery" class="navigation__link">Gallery</a>
+        <li class="social-net__item">
+          <a
+            class="social-net__link"
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social-net__logo">
+              <use href="/src/images/sprite.svg#icon-social-twitter"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-    </nav>
-    <button
-      type="button"
-      class="button button--header button--hide contacts-open"
-    >
-      Contact us
-    </button>
-
-    <button type="button" class="mobile-menu__button" menu-open>
-      <svg class="header__icon">
-        <use href="./images/sprite.svg#icon-menu"></use>
-      </svg>
-    </button>
-  </div>
-</header>
+    </div>
+  </section>
+</div>

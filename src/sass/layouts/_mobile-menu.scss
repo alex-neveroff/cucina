@@ -1,27 +1,3 @@
-.mobile-menu__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 32px;
-  height: 16px;
-  border: none;
-
-  color: $color-main;
-  background-color: transparent;
-
-  transition: color $transit;
-
-  &:hover,
-  &:focus {
-    color: $color-accent;
-  }
-
-  @include tablet {
-    display: none;
-  }
-}
-
 .mobile-menu__container {
   position: relative;
   max-width: 415px;
@@ -40,10 +16,6 @@
 
   transform: translateX(0);
   transition: transform $transit;
-
-  &.is-hidden {
-    transform: translateX(100%);
-  }
 
   @include tablet {
     display: none;
@@ -84,4 +56,27 @@
   top: 0px;
   width: 32px;
   height: 32px;
+}
+.mobile-menu__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 16px;
+  border: none;
+
+  color: $color-main;
+  background-color: transparent;
+
+  transition: color $transit;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
+  @include tablet {
+    display: none;
+  }
 }

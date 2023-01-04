@@ -10,6 +10,14 @@
   transition: transform $transit;
 }
 
+.modal--contacts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transit;
+}
+
 .modal__container {
   position: relative;
   background-color: $bcg-main;
@@ -27,14 +35,6 @@
     padding: 60px 60px;
     width: 530px;
   }
-}
-
-.contact-modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform $transit;
 }
 
 .order-modal__container {

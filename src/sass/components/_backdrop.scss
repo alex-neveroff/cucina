@@ -14,10 +14,14 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  .modal {
+
+  &.mobile-menu {
+    transform: translateX(100%);
+  }
+  & .modal {
     transform: scale(0.2);
   }
-  .contact-modal {
+  & .modal--contacts {
     transform: translate(-50%, -50%) scale(0.2);
   }
 }

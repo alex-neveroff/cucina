@@ -29,6 +29,7 @@ $('.slider-gallery').slick({
   const refs = {
     openMenuBtn: document.querySelector('[menu-open]'),
     closeMenuBtn: document.querySelector('[menu-close]'),
+    closeMenuBtn1: document.querySelector('[menu-close1]'),
     menu: document.querySelector('[menu]'),
     body: document.querySelector('body'),
     menuList: document.querySelector('.menu-list'),
@@ -36,6 +37,7 @@ $('.slider-gallery').slick({
 
   refs.openMenuBtn.addEventListener('click', toggleModal);
   refs.closeMenuBtn.addEventListener('click', toggleModal);
+  refs.closeMenuBtn1.addEventListener('click', toggleModal);
   refs.menuList.addEventListener('click', toggleModal);
 
   function toggleModal() {
