@@ -52,10 +52,15 @@
   margin-bottom: 12px;
 
   font-weight: 500;
-  font-size: 30px;
-  line-height: 1.23;
+  font-size: 26px;
+  line-height: 1.21;
   text-transform: uppercase;
   border-left: 1px solid $color-main;
+
+  @include mobile {
+    font-size: 30px;
+    line-height: 1.23;
+  }
 
   @include tablet {
     margin-bottom: 24px;
@@ -67,10 +72,15 @@
 
 .hero__label {
   margin-bottom: 228px;
+  width: 150px;
 
   color: $color-second;
   &--red {
     color: $color-red;
+  }
+
+  @include mobile {
+    width: 100%;
   }
 
   @include tablet {
