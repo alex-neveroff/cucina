@@ -66,9 +66,7 @@
   }
 }
 .slick-next:hover::before,
-.slick-prev:hover::before,
-.slick-next:focus::before,
-.slick-prev:focus::before {
+.slick-prev:hover::before {
   background-color: $color-accent;
   border-radius: 50%;
 }

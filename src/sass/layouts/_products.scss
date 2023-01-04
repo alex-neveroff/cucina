@@ -101,8 +101,7 @@
   background-image: url('../images/arrow-down.svg');
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
   background-color: $color-accent;
   border-radius: 50%;
 }
