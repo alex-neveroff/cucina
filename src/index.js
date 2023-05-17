@@ -23,78 +23,70 @@ $('.slider-gallery').slick({
   autoplaySpeed: 4000,
 });
 
-// Mobile menu
+// Mobile menu and modals
 
 (() => {
   const refs = {
     openMenuBtn: document.querySelector('[menu-open]'),
-    closeMenuBtn: document.querySelector('[menu-close]'),
-    closeMenuBtn1: document.querySelector('[menu-close1]'),
+    closeMenuBtn: document.querySelectorAll('[menu-close]'),
     menu: document.querySelector('[menu]'),
     body: document.querySelector('body'),
     menuList: document.querySelector('.menu-list'),
-  };
-
-  refs.openMenuBtn.addEventListener('click', toggleModal);
-  refs.closeMenuBtn.addEventListener('click', toggleModal);
-  refs.closeMenuBtn1.addEventListener('click', toggleModal);
-  refs.menuList.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    refs.menu.classList.toggle('is-opened');
-    refs.body.classList.toggle('no-scroll');
-  }
-})();
-
-// Modal Contacts
-
-(() => {
-  const refs = {
-    openContactModalBtn: document.querySelector('.contacts-open'),
-    openContactModalBtn1: document.querySelector('.contacts-open1'),
+    openContactModalBtn: document.querySelectorAll('.contacts-open'),
     closeContactModalBtn: document.querySelector('.contacts-close'),
     contactModal: document.querySelector('.contact-modal'),
-    body: document.querySelector('body'),
-  };
-
-  refs.openContactModalBtn.addEventListener('click', toggleModal);
-  refs.openContactModalBtn1.addEventListener('click', toggleModal);
-  refs.closeContactModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    refs.contactModal.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
-  }
-})();
-
-// Modal Ordering
-
-(() => {
-  const refs = {
-    openOrderModalBtn: document.querySelector('.order-open'),
-    openOrderModalBtn1: document.querySelector('.order-open1'),
-    openOrderModalBtn2: document.querySelector('.order-open2'),
-    openOrderModalBtn3: document.querySelector('.order-open3'),
-    openOrderModalBtn4: document.querySelector('.order-open4'),
-    openOrderModalBtn5: document.querySelector('.order-open5'),
-    openOrderModalBtn6: document.querySelector('.order-open6'),
+    openOrderModalBtn: document.querySelectorAll('.order-open'),
     closeOrderModalBtn: document.querySelector('.order-close'),
     orderModal: document.querySelector('.order-modal'),
-    body: document.querySelector('body'),
   };
 
-  refs.openOrderModalBtn.addEventListener('click', toggleModal);
-  refs.openOrderModalBtn1.addEventListener('click', toggleModal);
-  refs.openOrderModalBtn2.addEventListener('click', toggleModal);
-  refs.openOrderModalBtn3.addEventListener('click', toggleModal);
-  refs.openOrderModalBtn4.addEventListener('click', toggleModal);
-  refs.openOrderModalBtn5.addEventListener('click', toggleModal);
-  refs.openOrderModalBtn6.addEventListener('click', toggleModal);
+  refs.openMenuBtn.addEventListener('click', () =>
+    openModal(refs.menu, refs.body)
+  );
+  refs.closeMenuBtn.forEach(btn =>
+    btn.addEventListener('click', () => closeModal(refs.menu, refs.body))
+  );
+  refs.menuList.addEventListener('click', () =>
+    closeModal(refs.menu, refs.body)
+  );
 
-  refs.closeOrderModalBtn.addEventListener('click', toggleModal);
+  refs.openContactModalBtn.forEach(btn =>
+    btn.addEventListener('click', () => openModal(refs.contactModal, refs.body))
+  );
+  refs.closeContactModalBtn.addEventListener('click', () =>
+    closeModal(refs.contactModal, refs.body)
+  );
 
-  function toggleModal() {
-    refs.orderModal.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
+  refs.openOrderModalBtn.forEach(btn =>
+    btn.addEventListener('click', () => openModal(refs.orderModal, refs.body))
+  );
+  refs.closeOrderModalBtn.addEventListener('click', () =>
+    closeModal(refs.orderModal, refs.body)
+  );
+
+  window.addEventListener('keydown', handleKeyPress);
+
+  function handleKeyPress(event) {
+    if (event.key === 'Escape') {
+      if (!refs.menu.classList.contains('is-hidden')) {
+        closeModal(refs.menu, refs.body);
+      }
+      if (!refs.contactModal.classList.contains('is-hidden')) {
+        closeModal(refs.contactModal, refs.body);
+      }
+      if (!refs.orderModal.classList.contains('is-hidden')) {
+        closeModal(refs.orderModal, refs.body);
+      }
+    }
+  }
+
+  function openModal(modal, body) {
+    modal.classList.remove('is-hidden');
+    body.classList.add('no-scroll');
+  }
+
+  function closeModal(modal, body) {
+    modal.classList.add('is-hidden');
+    body.classList.remove('no-scroll');
   }
 })();
