@@ -33,6 +33,7 @@
   width: 125px;
   height: 125px;
   border-radius: 50%;
+  transition: transform 0.3s ease;
 
   filter: drop-shadow(0 0 10px #7c7070);
 
@@ -45,6 +46,10 @@
     width: 349px;
     height: 349px;
     filter: drop-shadow(0 0 15px #7c7070);
+  }
+
+  &:hover {
+    transform: rotate(45deg);
   }
 }
 
