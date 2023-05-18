@@ -1,48 +1,43 @@
 (() => {
-  const refs = {
-    body: document.querySelector('body'),
+  const openContactModalBtn = document.querySelectorAll('.contacts-open');
+  const closeContactModalBtn = document.querySelector('.contacts-close');
+  const contactModal = document.querySelector('.contact-modal');
+  const openOrderModalBtn = document.querySelectorAll('.order-open');
+  const closeOrderModalBtn = document.querySelector('.order-close');
+  const orderModal = document.querySelector('.order-modal');
+  const body = document.querySelector('body');
 
-    openContactModalBtn: document.querySelectorAll('.contacts-open'),
-    closeContactModalBtn: document.querySelector('.contacts-close'),
-    contactModal: document.querySelector('.contact-modal'),
-    openOrderModalBtn: document.querySelectorAll('.order-open'),
-    closeOrderModalBtn: document.querySelector('.order-close'),
-    orderModal: document.querySelector('.order-modal'),
-  };
-
-  refs.openContactModalBtn.forEach(btn =>
-    btn.addEventListener('click', () => openModal(refs.contactModal, refs.body))
+  openContactModalBtn.forEach(btn =>
+    btn.addEventListener('click', () => openModal(contactModal))
   );
-  refs.closeContactModalBtn.addEventListener('click', () =>
-    closeModal(refs.contactModal, refs.body)
+  closeContactModalBtn.addEventListener('click', () =>
+    closeModal(contactModal)
   );
 
-  refs.openOrderModalBtn.forEach(btn =>
-    btn.addEventListener('click', () => openModal(refs.orderModal, refs.body))
+  openOrderModalBtn.forEach(btn =>
+    btn.addEventListener('click', () => openModal(orderModal))
   );
-  refs.closeOrderModalBtn.addEventListener('click', () =>
-    closeModal(refs.orderModal, refs.body)
-  );
+  closeOrderModalBtn.addEventListener('click', () => closeModal(orderModal));
 
   window.addEventListener('keydown', handleKeyPress);
 
   function handleKeyPress(event) {
     if (event.key === 'Escape') {
-      if (!refs.contactModal.classList.contains('is-hidden')) {
-        closeModal(refs.contactModal, refs.body);
+      if (!contactModal.classList.contains('is-hidden')) {
+        closeModal(contactModal);
       }
-      if (!refs.orderModal.classList.contains('is-hidden')) {
-        closeModal(refs.orderModal, refs.body);
+      if (!orderModal.classList.contains('is-hidden')) {
+        closeModal(orderModal);
       }
     }
   }
 
-  function openModal(modal, body) {
+  function openModal(modal) {
     modal.classList.remove('is-hidden');
     body.classList.add('no-scroll');
   }
 
-  function closeModal(modal, body) {
+  function closeModal(modal) {
     modal.classList.add('is-hidden');
     body.classList.remove('no-scroll');
   }

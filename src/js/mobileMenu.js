@@ -1,15 +1,13 @@
 (() => {
-  const refs = {
-    body: document.querySelector('body'),
-    openMenuBtn: document.querySelector('[menu-open]'),
-    closeMenuBtn: document.querySelectorAll('[menu-close]'),
-    menu: document.querySelector('[menu]'),
-    menuList: document.querySelector('.menu-list'),
-  };
+  const openMenuBtn = document.querySelector('[menu-open]');
+  const closeMenuBtn = document.querySelectorAll('[menu-close]');
+  const mobileMenu = document.querySelector('[menu]');
+  const mobileMenuList = document.querySelector('.menu-list');
+  const body = document.querySelector('body');
 
-  refs.openMenuBtn.addEventListener('click', openMenu);
-  refs.closeMenuBtn.forEach(btn => btn.addEventListener('click', closeMenu));
-  refs.menuList.addEventListener('click', closeMenu);
+  openMenuBtn.addEventListener('click', openMenu);
+  closeMenuBtn.forEach(btn => btn.addEventListener('click', closeMenu));
+  mobileMenuList.addEventListener('click', closeMenu);
   window.addEventListener('keydown', handleKeyPress);
 
   function handleKeyPress(event) {
@@ -19,12 +17,12 @@
   }
 
   function openMenu() {
-    refs.menu.classList.add('is-opened');
-    refs.body.classList.add('no-scroll');
+    mobileMenu.classList.add('is-opened');
+    body.classList.add('no-scroll');
   }
 
   function closeMenu() {
-    refs.menu.classList.remove('is-opened');
-    refs.body.classList.remove('no-scroll');
+    mobileMenu.classList.remove('is-opened');
+    body.classList.remove('no-scroll');
   }
 })();
