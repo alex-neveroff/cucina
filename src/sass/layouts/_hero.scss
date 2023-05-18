@@ -128,13 +128,83 @@
 .hero__picture {
   position: relative;
   @include tablet {
-    width: 432px;
-    height: 579px;
+    width: 343px;
+    height: 541px;
   }
   @include desktop {
     margin-right: 47px;
   }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
+
+.overlay1,
+.overlay2,
+.overlay3,
+.overlay4 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  transition: transform $transit;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.overlay1 {
+  @include tablet {
+    top: -45px;
+    left: -75px;
+    animation-delay: 0.5s;
+    width: 225px;
+    height: 252px;
+    background-image: url('../images/ketchup-italy-tomatos.png');
+  }
+}
+
+.overlay2 {
+  @include tablet {
+    top: 130px;
+    left: -75px;
+    animation-delay: 1s;
+    width: 252px;
+    height: 126px;
+    background-image: url('../images/ketchup-fresh-garlic.png');
+  }
+}
+
+.overlay3 {
+  @include tablet {
+    bottom: 190px;
+    left: -110px;
+    animation-delay: 1.5s;
+    width: 241px;
+    height: 80px;
+    background-image: url('../images/ketchup-white-wine.png');
+  }
+}
+
+.overlay4 {
+  @include tablet {
+    bottom: 0;
+    left: -75px;
+    animation-delay: 2s;
+    width: 238px;
+    height: 114px;
+    background-image: url('../images/ketchup-fresh-brazil.png');
+  }
+}
+
 .hero__image {
   content: '';
   position: absolute;
@@ -150,7 +220,7 @@
 
   @include tablet {
     top: 0;
-    width: 432px;
-    height: 579px;
+    width: 343px;
+    height: 541px;
   }
 }
